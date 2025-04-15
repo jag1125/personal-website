@@ -1,0 +1,20 @@
+.section-three-container{
+    position: grid;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.brick-back{
+    position: relative;
+    z-index: 1;
+    top: 0.23%;
+    opacity: 0.4;
+    height: 840px;
+    width: 956px;
+}
+
+.window-containers{
+    z-index: 2;
+    position: relative;
+    top: 2%;
+}

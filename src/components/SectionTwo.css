@@ -1,0 +1,85 @@
+.aboutContainer{
+    position: grid;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.aboutTitle{
+    position: absolute;
+    z-index: 2;
+    font-family: "Alata", serif;
+    font-size: 50px;
+    left: 1000px;
+}
+
+.Polaroids{
+    position: absolute;
+    z-index: 2;
+    top: 72%;
+    left: 27%;
+    width: 410px;
+    height: 720px;
+}
+
+.GridBack{
+    top: 79%;
+    z-index: 0;
+    position: absolute;
+    opacity: 0.5;
+    height: 640px;
+    width: 956px;
+}
+
+.entireID{
+    position: relative;
+    top: 20%;
+    left: 32.5%;
+}
+
+.IDBack{
+    z-index: 1;
+    position: absolute;
+    height: 225px;
+    width: 550px;
+}
+
+.EntireText{
+    position: relative;
+    left: 18%;
+    top: 60px;;
+    z-index: 2;
+    font-family: "Ysabeau Infant", serif;
+}
+
+.InfoText{
+    position: absolute;
+    top: 50%;
+}
+
+.AllPostIts{
+    position: relative;
+    top: 50%;
+    left: 35%;
+    z-index: 2;
+}
+
+.PostIt{
+    width: 250px;
+    height: 250px;
+}
+
+.PostText1{
+    position: absolute;
+    width: 200px;
+    top: 25%;
+    left: 2.7%;
+    font-family: "Ysabeau Infant", serif;
+}
+
+.PostText2{
+    position: absolute;
+    top: 25%;
+    left: 29.2%;
+    width: 200px;
+    font-family: "Ysabeau Infant", serif;
+}

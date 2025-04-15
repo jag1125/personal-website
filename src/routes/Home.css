@@ -1,0 +1,22 @@
+.MainPage{
+    display: grid;
+    grid-template-columns: 1fr 956px;
+    grid-template-rows: 600px 600px 1fr;
+    column-gap: 27vh;
+    row-gap: 0;
+    height: 2000vh;
+    width: 100vh;
+}
+
+.sidebar{
+    display: grid;
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.section-one{
+    position: grid;
+    grid-column: 2;
+    grid-row: 1;
+}

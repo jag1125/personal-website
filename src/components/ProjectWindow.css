@@ -1,0 +1,51 @@
+.window-container{
+    position: absolute;
+}
+
+.window-back{
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    height: 400px;
+}
+
+.project-image{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    z-index: 0;
+    top: 4%;
+    left: 17%;
+}
+
+.project-button{
+    z-index: 2;
+    top: 62%;
+    left: 22%;
+    width: 170px;
+    height: 90px;
+    position: absolute;
+    border: 3px solid #ececec;
+    background: none;
+}
+
+.project-name{
+    width: 100px;
+    position: relative;
+    bottom: 19%;
+    left: 17%;
+    font-family: "Alata", serif;
+    color: #ececec;
+    text-align: center;
+}
+
+.project-button:hover{
+    cursor: pointer;
+    background: rgba(216, 213, 213, 0.4);
+    transition: 0.4s;
+    .project-name{
+        text-shadow: 1px 1px 10px #666666, 1px 1px 10px #a1a1a1;
+        transition: 0.4s;
+    }
+}
+
