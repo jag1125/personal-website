@@ -2,6 +2,8 @@
 
 :root{
     --title-text: rgb(124, 106, 97);
+    --title-text-dark: rgb(40, 35, 33);
+    --p-text: rgb(34, 34, 34);
 }
 
 body{
@@ -13,16 +15,80 @@ body{
     to {display: none; opacity: 0%;}
 }
 
-.fade-out{
+@keyframes fade-in{
+    from {display: none; opacity: 0%;}
+    to {display: block; opacity: 100%;}
+}
+
+@keyframes fade-in-more{
+    from {opacity: 0%; width: 50%;}
+    to {opacity: 100%; width: 100%;}
+}
+
+.hidden{
+    display: none;
+}
+
+.fade-out-loading{
     display: none;
     animation-name: fade-out;
-    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+.fade-out{
+    animation-fill-mode: initial;
+    animation-name: fade-out;
+    animation-duration: 2s;
+}
+
+.fade-in{
+    animation-fill-mode: initial;
+    animation-name: fade-in;
+    animation-duration: 2s;
+}
+
+.fade-in-more{
+    animation-fill-mode: initial;
+    animation-name: fade-in-more;
     animation-duration: 2s;
 }
 
 .title-text{
     color: var(--title-text);
+    font-size: 2vw;
     font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title-text-dark{
+    color: var(--title-text-dark);
+    font-size: 2vw;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.small-title-text{
+    color: var(--title-text);
+    font-size: 1vw;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.small-title-text-dark{
+    color: var(--title-text-dark);
+    font-size: 1vw;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.p-text{
+    color: var(--p-text);
+    font-size: 1vw;
+    font-family: "Patrick Hand", cursive;
     font-weight: 400;
     font-style: normal;
 }
@@ -42,7 +108,7 @@ body{
 
 .home-buttons:hover{
     cursor: pointer;
-    filter: drop-shadow(0 0 0.55rem rgba(140, 115, 101, 0.5));
+    filter: drop-shadow(0 0 0.55rem rgba(140, 115, 101, 0.689));
 }
 
 #project-prop{
@@ -125,6 +191,94 @@ body{
     width: 100%;
     height: 100%;
     background-color: rgb(40, 35, 33);
+}
+
+#exit-screen-container{
+    position: absolute;
+    z-index: 4;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+#exit-screen-btn{
+    position: absolute;
+    cursor: pointer;
+    z-index: 4;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    border: none;
+    opacity: 80%;
+    background-color: rgb(40, 35, 33);
+}
+
+#exit-text{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 90%;
+}
+
+#about-me-container{
+    position: absolute;
+    z-index: 5;
+    bottom: 0%;
+    width: 99%;
+    height: auto;
+}
+
+#about-back{
+    position: absolute;
+    z-index: 5;
+    width: 65%;
+    left: 17%;
+    bottom: 0.5vw;
+
+    filter: drop-shadow(0 0 0.55rem rgba(0, 0, 0, 0.5));
+}
+
+#about-title{
+    position: absolute;
+    z-index: 5;
+    width: 10%;
+    left: 57.5vw;
+    bottom: 30vw;
+}
+
+#about-text{
+    position: absolute;
+    text-align: center;
+    z-index: 5;
+    width: 23%;
+    left: 50.5vw;
+    bottom: 22vw;
+}
+
+#williams-title{
+    position: absolute;
+    z-index: 5;
+    width: 10%;
+    left: 58vw;
+    bottom: 13vw;
+}
+
+#williams-text-top{
+    position: absolute;
+    z-index: 5;
+    width: 20%;
+    left: 58vw;
+    bottom: 11.5vw;
+}
+
+#williams-text-bottom{
+    position: absolute;
+    z-index: 5;
+    width: 20%;
+    left: 58vw;
+    bottom: 10vw;
 }
 
 #background-full{
