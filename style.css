@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Patrick+Hand&family=Patrick+Hand+SC&display=swap');
+
+:root{
+    --title-text: rgb(124, 106, 97);
+}
+
+body{
+    background-color: rgb(75, 66, 61);
+}
+
+@keyframes fade-out{
+    from {display: block; opacity: 100%;}
+    to {display: none; opacity: 0%;}
+}
+
+.fade-out{
+    display: none;
+    animation-name: fade-out;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+.title-text{
+    color: var(--title-text);
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.full-home-buttons{
+    position: absolute;
+    width: 99%;
+    height: auto;
+    z-index: 2;
+}
+
+.home-buttons{
+    height: auto;
+    background: none;
+    border-style: none;
+}
+
+.home-buttons:hover{
+    cursor: pointer;
+    filter: drop-shadow(0 0 0.55rem rgba(140, 115, 101, 0.5));
+}
+
+#project-prop{
+    position: absolute;
+    width: 14%;
+    left: 47.5vw;
+    bottom: 17.7vw;
+}
+
+#project-btn{
+    width: 100%;
+}
+
+#about-prop{
+    position: absolute;
+    width: 12%;
+    left: 35.5vw;
+    bottom: 21.3vw;
+}
+
+#about-btn{
+    width: 100%;
+}
+
+#resume-prop{
+    position: absolute;
+    width: 13%;
+    left: 35vw;
+    bottom: 16.2vw;
+}
+
+#resume-btn{
+    width: 100%;
+}
+
+#linkedin-prop{
+    position: absolute;
+    width: 6.5%;
+    left: 18vw;
+    bottom: 23.7vw;
+}
+
+#linkedin-btn{
+    width: 100%;
+}
+
+#itch-prop{
+    position: absolute;
+    width: 9%;
+    left: 10.5vw;
+    bottom: 16.7vw;
+}
+
+#itch-btn{
+    width: 100%;
+}
+
+#github-prop{
+    position: absolute;
+    width: 5.5%;
+    left: 5.2vw;
+    bottom: 10.5vw;
+}
+
+#github-btn{
+    width: 100%;
+}
+
+#loading-text{
+    position: absolute;
+    left: 45%;
+    top: 45%;
+}
+
+#loading{
+    position: absolute;
+    z-index: 5;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(40, 35, 33);
+}
+
+#background-full{
+    position: absolute;
+    bottom: 0%;
+    width: 99%;
+    height: auto;
+}
+
+#background-right{
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+    right: 0%;
+    width: 70%;
+
+    filter: drop-shadow(0 0 0.55rem rgba(0, 0, 0, 0.5));
+}
+
+#background-left{
+    position: absolute;
+    z-index: 0;
+    bottom: 0%;
+    left: -1%;
+    width: 33%;
+
+    filter: drop-shadow(0 0 0.55rem rgba(0, 0, 0, 0.5));
+}
