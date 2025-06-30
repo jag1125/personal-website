@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // All buttons
     const about_button = document.getElementById('about-prop');
+    const resume_button = document.getElementById('resume-prop');
 
     // All screens
     const about_screen = document.getElementById('about-me-container');
+    const resume_screen = document.getElementById('resume-container');
 
     function openScreen(screen_name){
         exit_screen.classList.remove('hidden');
@@ -22,6 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 about_screen.classList.remove('hidden');
                 about_screen.classList.add('current');
                 about_screen.classList.add('fade-in');
+                return
+            case 'resume':
+                resume_screen.classList.remove('hidden');
+                resume_screen.classList.add('current');
+                resume_screen.classList.add('fade-in');
                 return
             default:
                 return
@@ -40,7 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    // Button handlers
     exit_screen.addEventListener('click', closeScreen);
     about_button.addEventListener('click', () => openScreen('about'));
+    resume_button.addEventListener('click', () => openScreen('resume'));
 
 });
