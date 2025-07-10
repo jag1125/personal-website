@@ -516,6 +516,11 @@ button{
     background-size: cover;
 }
 
+#witches-img{
+    background-image: url('images/witches-popup/1.png');
+    background-size: cover;
+}
+
 #background-full{
     position: absolute;
     bottom: 0%;

@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         popup_container.id = `${short_name}-container`
         popup_container.classList.add('hidden');
         popup_container.classList.add('popup-container');
-        popup_photo.setAttribute('src', 'images/personal-popup/1.png');
+        popup_photo.setAttribute('src', `images/${short_name}-popup/1.png`);
         popup_photo.classList.add('popup-photo');
         popup_title.classList.add('popup-title');
         popup_title.classList.add('title-text');
@@ -149,21 +149,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         popup_left.addEventListener('click', () => {
             if(current_photo === 1){
-                popup_photo.setAttribute('src', `images/personal-popup/${num_photos}.png`);
+                popup_photo.setAttribute('src', `images/${short_name}-popup/${num_photos}.png`);
                 current_photo = num_photos;
                 return;
             }
-            popup_photo.setAttribute('src', `images/personal-popup/${current_photo-1}.png`);
+            popup_photo.setAttribute('src', `images/${short_name}-popup/${current_photo-1}.png`);
             current_photo--;
         });
 
         popup_right.addEventListener('click', () => {
             if(current_photo === num_photos){
-                popup_photo.setAttribute('src', `images/personal-popup/1.png`);
+                popup_photo.setAttribute('src', `images/${short_name}-popup/1.png`);
                 current_photo = 1;
                 return;
             }
-            popup_photo.setAttribute('src', `images/personal-popup/${current_photo+1}.png`);
+            popup_photo.setAttribute('src', `images/${short_name}-popup/${current_photo+1}.png`);
             current_photo++;
         });
 
@@ -247,5 +247,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Creates projects
     const personal_desc = "This is my personal website that you\'re looking at right now! I wanted to center the design of this website around things that I enjoy and colors that bring me peace. The website is built using strictly HTML, CSS, and JavaScript and is hosted using Github Pages. I'd say one of the biggest struggles was drawing all the content for the website, but it was all worth it in the end. :)"
     createProject('personal', 'Personal Website', ['JavaScript', 'HTML', 'CSS'], 3, personal_desc);
-
+    const witches_desc = "A beginner's Unity project built while mentoring a kid at Best Buy Teen Tech Center. For a couple of weeks, we both went through the Learn With Unity coursework and grasped the fundamentals of the platform. After some work, we made some models and made the basis for an 'Overcooked' style game with basic movement, events, and properties for borders and items."
+    createProject('witches', 'Witches Brew', ['Unity', 'C-Sharp'], 3, witches_desc);
 });
