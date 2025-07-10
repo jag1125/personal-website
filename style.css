@@ -10,6 +10,7 @@
 
 body{
     background-color: rgb(75, 66, 61);
+    overflow-x: hidden;
 }
 
 h1, h2, h3{
