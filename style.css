@@ -3,6 +3,7 @@
 :root{
     --title-text: rgb(124, 106, 97);
     --title-text-dark: rgb(40, 35, 33);
+    --title-text-lighter:rgb(186, 172, 165);
     --p-text: rgb(34, 34, 34);
     --regular-shadow: rgba(0, 0, 0, 0.5);
 }
@@ -11,7 +12,7 @@ body{
     background-color: rgb(75, 66, 61);
 }
 
-h1, h2{
+h1, h2, h3{
     font-family: "Jua", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -23,6 +24,13 @@ p{
     font-style: normal; 
 }
 
+button{
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+}
+
 @keyframes fade-out{
     from {display: block; opacity: 100%;}
     to {display: none; opacity: 0%;}
@@ -31,11 +39,6 @@ p{
 @keyframes fade-in{
     from {display: none; opacity: 0%;}
     to {display: block; opacity: 100%;}
-}
-
-@keyframes fade-in-more{
-    from {opacity: 0%; width: 50%;}
-    to {opacity: 100%; width: 100%;}
 }
 
 .hidden{
@@ -66,6 +69,9 @@ p{
 
     &.dark{
         color: var(--title-text-dark);
+    }
+    &.lighter{
+        color: var(--title-text-lighter);
     }
 }
 
@@ -99,6 +105,187 @@ p{
 .home-buttons:hover{
     cursor: pointer;
     filter: drop-shadow(0 0 0.55rem rgba(140, 115, 101, 0.689));
+}
+
+.mini-project-container{
+    position: relative;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.mini-project-title{
+    position: absolute;
+    left: 2vw;
+    bottom: 6vw;
+}
+
+.mini-project-shdesc{
+    position: absolute;
+    left: 2vw;
+    bottom: 5.5vw;
+}
+
+.mini-project-img{
+    position: relative;
+    width: 93%;
+    height: 90%;
+    left: 0.8vw;
+    top: 0vw;
+    border-radius: 1.5vw;
+    border: 0.1vw solid var(--title-text-dark);
+}
+
+.header-img{
+    position: absolute;
+    bottom: 0vw;
+    width: 100%;
+}
+
+.icon-container{
+    position: relative;
+    width: 20vw;
+    left: 2vw;
+    bottom: 0vw;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 2vw; 
+    grid-auto-rows: 1vw;
+    grid-gap: 0.5vw;
+}
+
+.learn-more-btn{
+    position: absolute;
+    padding: 0.2vw;
+    padding-left: 0.4vw;
+    padding-right: 0.4vw;
+    bottom: 4.5vw;
+    left: 2vw;
+    background-color: var(--title-text-lighter);
+    border-radius: 0.4vw;
+    border: none;
+    &:hover{
+        background-color: var(--title-text-dark);
+        color: var(--title-text-lighter);
+        transition: 0.5s;
+    }
+}
+
+.logo-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo{
+    width: 100%;
+}
+
+.logo-tooltip{
+    position: absolute;
+    top: 0.7vw;
+    font-size: 1vw;
+    color: #B9ADA2;
+    background-color: var(--title-text-dark);
+    padding: 0.4vw;
+    border-radius: 0.4vw;
+}
+
+.circle-button{
+    background-color: var(--title-text-lighter);
+    font-size: 2vw;
+    padding-left: 0.8vw;
+    padding-right: 0.8vw;
+    border: none;
+    border-radius: 100%;
+    &:hover{
+        background-color: var(--title-text-dark);
+        color: var(--title-text-lighter);
+        transition: 0.5s;
+    }
+}
+
+.popup-container{
+    position: absolute;
+    width: 100%;
+    z-index: 7;
+}
+
+.popup-title{
+    position: absolute;
+    text-align: center;
+    left: 19.8vw;
+    bottom: 22vw;
+    width: 60%;
+}
+
+.popup-text{
+    position: absolute;
+    text-align: center;
+    left: 34.6vw;
+    bottom: 15vw;
+    width: 30%;
+}
+
+.popup-exit{
+    position: absolute;
+    left: 36vw;
+    bottom: 45.8vw;
+}
+
+.popup-left{
+    position: absolute;
+    z-index: 7;
+    left: 38vw;
+    bottom: 32.8vw;
+    font-size: 1.5vw;
+    padding-top: 0.5vw;
+}
+
+.popup-right{
+    position: absolute;
+    z-index: 7;
+    right: 38vw;
+    bottom: 32.8vw;
+    font-size: 1.5vw;
+    padding-top: 0.5vw;
+}
+
+.popup-photo{
+    position: absolute;
+    border-radius: 0.4vw;
+    z-index: 6;
+    width: 28%;
+    bottom: 27.6vw;
+    left: 36vw;
+
+    filter: drop-shadow(0 0 0.55rem var(--regular-shadow));
+}
+
+#popup-back{
+    position: absolute;
+    z-index: 6;
+    left: 32.5vw;
+    bottom: 0.5vw;
+    width: 34%;
+
+    filter: drop-shadow(0 0 0.55rem var(--regular-shadow));
+}
+
+#mini-projects-container{
+    position: absolute;
+    display: grid;
+    overflow: scroll;
+    justify-content: center;
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 35vw;
+    grid-gap: 0.1vw 1vw;
+    width: 50%;
+    height: 40vw;
+    left: 25.5%;
+    bottom: 2.7vw;
 }
 
 #project-prop{
@@ -297,6 +484,36 @@ p{
     bottom: 5vw;
     
     filter: drop-shadow(0 0 0.55rem var(--regular-shadow));
+}
+
+#projects-container{
+    position: absolute;
+    z-index: 5;
+    bottom: 0%;
+    width: 99%;
+    height: auto;
+}
+
+#projects-back{
+    position: absolute;
+    width: 62%;
+    left: 19.5%;
+    bottom: 0.5vw;
+
+    filter: drop-shadow(0 0 0.55rem var(--regular-shadow));
+}
+
+#projects-title{
+    position: absolute;
+    z-index: 5;
+    width: 10%;
+    left: 46.2vw;
+    bottom: 41.5vw;
+}
+
+#personal-img{
+    background-image: url('images/project-imgs/personal/personal-front.jpeg');
+    background-size: cover;
 }
 
 #background-full{
